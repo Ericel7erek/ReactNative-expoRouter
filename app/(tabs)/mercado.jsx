@@ -3,22 +3,22 @@ import { useEffect, useState } from "react";
 import { FlatList, Pressable, ScrollView, Text, View } from "react-native";
 
 const mercado = () => {
-  const [items, setItems] = useState();
+  const [cosas, setCosas] = useState();
   const router = useRouter();
   useEffect(() => {
     fetch("https://api.mercadolibre.com/sites/MLA/search?q=malabares")
       .then((res) => res.json())
-      .then((data) => setItems(data.results));
+      .then((data) => setCosas(data.results));
   }, []);
   return (
     <View>
       <FlatList
-        data={items}
+        data={cosas}
         renderItem={({ item }) => (
           <Text
             style={{
               fontWeight: "bold",
-              color: "white",
+              color: "blue",
               backgroundColor: "grey",
               marginBottom: 5,
               margin: 10,

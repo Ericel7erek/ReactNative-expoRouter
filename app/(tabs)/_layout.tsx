@@ -10,9 +10,7 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 export default function TabLayout() {
    const { id } = useLocalSearchParams();
 
-   useEffect(()=> {
-alert('aa'+id+'aa')
-   },[])
+
   return (
 <>
     <Stack>
